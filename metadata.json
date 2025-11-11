@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Copy of Gemini Blog Post Outline Generator",
+  "description": "An application that uses the Gemini API to generate a comprehensive, SEO-friendly blog post outline based on user-provided topic details.",
+  "requestFramePermissions": []
+}

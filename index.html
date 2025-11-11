@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Blog Post Outline Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              title: ['"Exo 2"', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                DEFAULT: 'hsl(215 28% 17%)', // Dark Slate
+                foreground: 'hsl(210 40% 98%)',
+              },
+              secondary: {
+                DEFAULT: 'hsl(195 53% 96%)', // Very light cyan/teal
+                foreground: 'hsl(215 16% 47%)', // Muted slate gray
+              },
+              accent: {
+                DEFAULT: 'hsl(170 80% 40%)', // Vibrant Teal
+                foreground: 'hsl(0 0% 100%)', // White
+              },
+              card: {
+                DEFAULT: 'hsl(0 0% 100%)',
+                foreground: 'hsl(215 28% 17%)',
+              },
+              input: 'hsl(210 20% 94%)',
+            },
+            borderRadius: {
+              lg: `0.5rem`,
+              md: `calc(0.5rem - 2px)`,
+              sm: `calc(0.5rem - 4px)`,
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+              'pulse-slow': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'zoom-out-fade': 'zoomOutFade 0.5s ease-in-out forwards',
+              'slide-in-from-left': 'slideInLeft 0.5s ease-out forwards',
+              'slide-in-from-right': 'slideInRight 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              zoomOutFade: {
+                '0%': { opacity: '1', transform: 'scale(1)' },
+                '100%': { opacity: '0', transform: 'scale(0.95)' },
+              },
+              slideInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(-20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInRight: {
+                '0%': { opacity: '0', transform: 'translateX(20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              pulse: {
+                '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                '50%': { opacity: '.95', transform: 'scale(1.05)' },
+              }
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-secondary font-sans">
+    <div id="root"></div>
+  </body>
+</html>
